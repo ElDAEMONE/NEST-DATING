@@ -33,6 +33,11 @@ export class ProfilesController {
   }
   @Delete(':id')
   @HttpCode(HttpStatus.OK)
-  remove(@Param('id') id: string) {}
+  remove(@Param('id') id: string) {
+      return {
+    message: 'Profile deleted successfully',
+    id,
+  };
+  }
 
 }
